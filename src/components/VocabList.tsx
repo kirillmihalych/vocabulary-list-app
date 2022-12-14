@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Grid, Paper } from '@mui/material'
 import { IWord } from '../models/types'
 
 interface IVocabListProps {
@@ -7,15 +8,28 @@ interface IVocabListProps {
 
 const VocabList: FC<IVocabListProps> = ({ vocab }) => {
   return (
-    <div>
+    <Grid container spacing={2} sx={{ marginTop: '4rem' }}>
       {vocab.map((word: IWord) => (
-        <article key={word.id}>
-          <span>{word.word}</span>
-          &nbsp;
-          <span>{word.translate}</span>
-        </article>
+        <Grid item key={word.id} xs={12}>
+          <Paper
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              border: '2px solid black',
+              height: '45px',
+              padding: '0px 15px',
+              textTransform: 'capitalize',
+              fontSize: '22px',
+              fontWeight: 'bold',
+            }}
+          >
+            <span style={{ flexGrow: '1' }}>{word.word}</span>
+            <span>{word.translate}</span>
+          </Paper>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   )
 }
 

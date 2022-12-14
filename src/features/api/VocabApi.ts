@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react'
+import { IWord } from '../../models/types'
 
 export const vocabApi = createApi({
   reducerPath: 'vocabApi',
@@ -6,7 +7,7 @@ export const vocabApi = createApi({
     baseUrl: 'http://localhost:8000',
   }),
   endpoints: (builder) => ({
-    getVocabList: builder.query({
+    getVocabList: builder.query<IWord[], []>({
       query: () => '/vocab',
     }),
   }),

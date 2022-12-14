@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { IWord } from '../features/api/types'
+import { IWord } from '../models/types'
 
 interface IVocabListProps {
   vocab: IWord[]

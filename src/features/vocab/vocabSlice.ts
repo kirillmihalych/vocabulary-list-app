@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { IVocabState } from '../api/types'
+import { IVocabState } from '../../models/types'
 
 const initialState: IVocabState = {
   vocab: [],

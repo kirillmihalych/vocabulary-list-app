@@ -1,7 +1,14 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import vocabReducer from '../features/vocab/vocabSlice'
+import { vocabApi } from '../features/api/VocabApi'
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    vocab: vocabReducer,
+    [vocabApi.reducerPath]: vocabApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(vocabApi.middleware),
 })
 
 export type AppDispatch = typeof store.dispatch

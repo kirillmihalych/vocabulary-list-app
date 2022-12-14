@@ -1,0 +1,19 @@
+{
+  "vocab": [
+    {
+      "word": "run",
+      "translate": "бегать",
+      "id": 1
+    },
+    {
+      "word": "jump",
+      "translate": "прыгать",
+      "id": 2
+    },
+    {
+      "word": "orange",
+      "translate": "апельсин",
+      "id": 3
+    }
+  ]
+}

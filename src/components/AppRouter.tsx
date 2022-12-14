@@ -8,7 +8,7 @@ const AppRouter: FC = () => {
     <div>
       <Routes>
         {routes.map(({ path, element }) => (
-          <Route path={path} element={element} />
+          <Route key={path} path={path} element={element} />
         ))}
         <Route path='*' element={<Navigate to={RouteNames.VOCAB} replace />} />
       </Routes>

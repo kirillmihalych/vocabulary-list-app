@@ -3,7 +3,7 @@ export interface IVocabState {
 }
 
 export interface IWord {
-  id: number
+  id?: number
   word: string
   translate: string
 }

@@ -14,6 +14,26 @@
       "word": "orange",
       "translate": "апельсин",
       "id": 3
+    },
+    {
+      "word": "Work",
+      "translate": "Работать",
+      "id": 4
+    },
+    {
+      "word": "Milk",
+      "translate": "Молоко",
+      "id": 5
+    },
+    {
+      "word": "Juice",
+      "translate": "Сок",
+      "id": 6
+    },
+    {
+      "word": "Word",
+      "translate": "Слово",
+      "id": 7
     }
   ]
 }

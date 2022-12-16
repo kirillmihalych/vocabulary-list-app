@@ -20,7 +20,26 @@ export const vocabApi = createApi({
       }),
       invalidatesTags: ['Word'],
     }),
+    updateWord: builder.mutation<IWord, IWord>({
+      query: (word) => ({
+        url: `/vocab/${word.id}`,
+        method: 'UPDATE',
+        body: word,
+      }),
+      invalidatesTags: ['Word'],
+    }),
+    deleteWord: builder.mutation<IWord, IWord>({
+      query: (word) => ({
+        url: `/vocab/${word.id}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Word'],
+    }),
   }),
 })
 
-export const { useGetVocabListQuery, useCreateWordMutation } = vocabApi
+export const {
+  useGetVocabListQuery,
+  useCreateWordMutation,
+  useDeleteWordMutation,
+} = vocabApi

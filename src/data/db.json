@@ -1,16 +1,6 @@
 {
   "vocab": [
     {
-      "word": "run",
-      "translate": "бегать",
-      "id": 1
-    },
-    {
-      "word": "jump",
-      "translate": "прыгать",
-      "id": 2
-    },
-    {
       "word": "orange",
       "translate": "апельсин",
       "id": 3
@@ -26,14 +16,9 @@
       "id": 5
     },
     {
-      "word": "Juice",
-      "translate": "Сок",
+      "word": "Dick",
+      "translate": "Хуй",
       "id": 6
-    },
-    {
-      "word": "Word",
-      "translate": "Слово",
-      "id": 7
     }
   ]
 }

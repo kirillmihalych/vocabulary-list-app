@@ -1,15 +1,25 @@
 import { FC, useState } from 'react'
 import { IWord } from '../models/types'
-import { Grid, Paper, Button } from '@mui/material'
+import { Grid, Paper, Button, IconButton } from '@mui/material'
+import DeleteIcon from '@mui/icons-material/Delete'
 
 interface IVocabItemProps {
   word: IWord
+  remove: (word: IWord) => void
+  // update: (word: IWord) => void
 }
 
-const VocabItem: FC<IVocabItemProps> = ({ word }) => {
+const VocabItem: FC<IVocabItemProps> = ({ word, remove }) => {
   const [learned, setLearned] = useState<boolean>(false)
   const [familiar, setFamiliar] = useState<boolean>(false)
   const [unknown, setUnknown] = useState<boolean>(false)
+
+  const handleRemove = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    remove(word)
+  }
+
+  const handleUpdate = (e: React.MouseEvent) => {}
 
   const activeHandler = (s: string | null) => {
     if (s?.toLowerCase() === 'learned') {
@@ -80,6 +90,9 @@ const VocabItem: FC<IVocabItemProps> = ({ word }) => {
         >
           Learned
         </Button>
+        <IconButton onClick={handleRemove}>
+          <DeleteIcon />
+        </IconButton>
       </Paper>
     </Grid>
   )
